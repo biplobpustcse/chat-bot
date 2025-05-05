@@ -1,2 +1,2 @@
 # Chatbot
-Building a chatbot with .NET Core + React + OpenAI
+Building a chatbot (Chat Assistant) with .NET Core + React + OpenAI
