@@ -1,0 +1,54 @@
+# .NET Core build folders
+**/bin/
+**/obj/
+**/publish/
+**/out/
+
+# .NET Core user secrets & settings
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vssscc
+
+# Visual Studio folder
+.vs/
+
+# ASP.NET Core environment configs (optional)
+Chatbot.API/appsettings.*.json
+
+# Logs
+*.log
+
+# React dependencies
+chat-client/node_modules/
+chat-client/.pnp/
+chat-client/.pnp.js
+
+# React testing
+chat-client/coverage/
+
+# React production build
+chat-client/build/
+
+# React environment variables
+chat-client/.env
+chat-client/.env.local
+chat-client/.env.development.local
+chat-client/.env.test.local
+chat-client/.env.production.local
+
+# React log files
+chat-client/npm-debug.log*
+chat-client/yarn-debug.log*
+chat-client/yarn-error.log*
+
+# System files
+*.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+
