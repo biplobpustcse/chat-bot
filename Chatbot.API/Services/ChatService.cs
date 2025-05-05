@@ -5,6 +5,7 @@ public class ChatService
 {
     private readonly HttpClient _httpClient;
     private readonly string _apiKey;
+    private readonly string _model;
     private static readonly SemaphoreSlim _rateLimitSemaphore = new(1, 1);
     private static DateTime _lastCallTime = DateTime.MinValue;
 
@@ -12,6 +13,7 @@ public class ChatService
     {
         _httpClient = new HttpClient();
         _apiKey = configuration["OpenAI:ApiKey"]; // get from appsettings.json or environment
+        _model = configuration["OpenAI:Model"]; // get from appsettings.json or environment
     }
 
     public async Task<string> GetChatResponseAsync(string userMessage)
@@ -31,7 +33,7 @@ public class ChatService
 
             var payload = new
             {
-                model = "gpt-3.5-turbo",
+                model = _model,
                 messages = new[]
                 {
                 new { role = "system", content = "You are a helpful assistant." },
